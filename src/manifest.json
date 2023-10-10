@@ -14,9 +14,12 @@
     {
       "matches": ["http://*/*", "https://*/*", "<all_urls>"],
       "js": ["contentScript.bundle.js"],
-      "css": ["content.styles.css"]
+      "css": ["content.styles.css"],
+      "run_at": "document_start"
     }
   ],
+  "permissions": ["webNavigation", "tabs", "activeTab", "scripting"],
+  "host_permissions": ["https://*.monster.com/*"],
   "web_accessible_resources": [
     {
       "resources": ["content.styles.css", "icon-128.png", "icon-34.png"],

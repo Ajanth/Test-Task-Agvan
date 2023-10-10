@@ -4,10 +4,11 @@ import './Popup.css';
 const Popup = () => {
   const APPLY_RANDOM_JOB_ACTION = 'APPLY_RANDOM_JOB_ACTION';
   const formData = {
-    email: 'testuser@gmail.com',
-    password: 'Test1234',
+    email: 'ancientwinterwolf@gmail.com',
+    password: 'Test12345!',
     jobTitleToSearch: 'Software Engineer',
     resumePath: '/Users/ajanthkathirkamu/Downloads/resume.pdf',
+    baseUrl: 'https://www.monster.com/',
   };
 
   const applyRandomJob = () => {
