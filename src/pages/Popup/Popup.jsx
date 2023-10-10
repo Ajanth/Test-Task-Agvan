@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from '../../assets/img/logo.svg';
-import Greetings from '../../containers/Greetings/Greetings';
 import './Popup.css';
 
 const Popup = () => {
+  const APPLY_RANDOM_JOB_ACTION = 'APPLY_RANDOM_JOB_ACTION';
+  const formData = {
+    email: 'testuser@gmail.com',
+    password: 'Test1234',
+    jobTitleToSearch: 'Software Engineer',
+    resumePath: '/Users/ajanthkathirkamu/Downloads/resume.pdf',
+  };
+
+  const applyRandomJob = () => {
+    console.log('applyRandomJob called');
+    chrome.runtime.sendMessage(
+      {
+        action: APPLY_RANDOM_JOB_ACTION,
+        data: {
+          formData,
+        },
+      },
+      (response) => {
+        console.log('applyRandomJob response', response);
+      }
+    );
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/pages/Popup/Popup.jsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React!
-        </a>
-      </header>
+    <div className="app">
+      <p className="description">Click to automate your task</p>
+      <button type="button" className="button" onClick={applyRandomJob}>
+        Automate
+      </button>
     </div>
   );
 };

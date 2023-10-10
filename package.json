@@ -1,11 +1,12 @@
 {
-  "name": "chrome-extension-boilerplate-react",
+  "name": "chrome-extension-monster-scraper",
   "version": "5.0.4",
-  "description": "A chrome extension boilerplate built with React 18, Webpack 5, and Webpack Dev Server 4",
+  "author": "Ajanth",
+  "description": "Chrome extension that automates some tasks in sites",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lxieyang/chrome-extension-boilerplate-react.git"
+    "url": "https://github.com/Ajanth/Test-Task-Agvan.git"
   },
   "scripts": {
     "build": "node utils/build.js",
