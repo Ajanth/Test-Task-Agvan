@@ -37,6 +37,7 @@ const searchJobAndClick = async () => {
   await new Promise((resolve) => setTimeout(resolve, 6000));
   await searchJob(formData);
   console.log('BG: applyRandomJob  search done');
+  await new Promise((resolve) => setTimeout(resolve, 6000));
   await clickFirstJob();
   console.log('BG: applyRandomJob  click done');
 };
